@@ -1,0 +1,951 @@
+
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>192.168.13.200</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/bintang.css">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon ">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Perpus <sup>Le</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="dasbor.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dasbor User</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <div class="sidebar-heading">
+                Menu
+            </div>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+                    aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Halaman</span>
+                </a>
+                <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Fitur:</h6>
+                        <a class="collapse-item" href="ulasan.php">Ulasan pengguna</a>
+                    </div>
+                </div>
+            </li>
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+            <!-- Nav Item - Charts -->
+        </ul>
+        <!-- End of Sidebar -->
+
+
+
+
+
+
+
+
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4  static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+
+
+
+            
+
+
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+
+
+                        <!-- Nav Item - Alerts -->
+
+
+                        <!-- Nav Item - Messages -->
+
+                        <!-- Example single danger button -->
+                        <form method="GET" action="" class="btn-group h-100">
+                            <button type="button" class="btn btn-primary dropdown-toggle mt-3" style="height: 50%;"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Koleksi
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <button class="dropdown-item" type="submit" name="kategori" value="novel">Novel</button>
+                                <button class="dropdown-item" type="submit" name="kategori"
+                                    value="edukasi">Edukasi</button>
+                            </div>
+                        </form>
+
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $username; ?></span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid bg-transparent">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-dark pl-3">Dasbor</h1>
+
+                    <div class="row d-flex justify-content-between align-content-end">
+                                    <div class="col-lg-6 mb-3 bg-white shadow text-dark border">
+                            <div class="row h-100">
+                                <div class="col-4 p-0 d-flex align-items-center" style="height: 100%">
+                                    <img src="<?php echo $gambar_cover; ?>" class="img-fluid w-100 h-100"
+                                        alt="Gambar Buku" style="object-fit: cover;">
+                                </div>
+                                <div class="col-8 d-flex flex-column justify-content-between">
+                                    <div class="wrap">
+                                        <div class="row">
+                                            <div class="col-12 pt-3">
+                                                <strong>Diupload pada:</strong> <?php echo $tanggal_upload; ?>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <strong>Kategori:</strong> <?php echo $kategori; ?>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <strong>Judul:</strong> <?php echo $judul; ?>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-1">
+                                            <div class="col-12">
+                                                <strong>Sinopsis:</strong> 
+                                                <p>
+                                                    
+                                                    SOAL LATIHAN BAHASA JAWA  1
+
+
+
+                                                    Nonton Bareng Semifinal Bal-Balan Piala Dunia 2014
+                                                    
+                                                        Karang Taruna Desa Sumberejo ing dina Kemis tanggal 10 Juli kepungur nggelar acara nonton bareng Semifinal Bal-balan Piala Dunia 2014. Argentina ngadhepi Belanda kang disiyarake TV swasta nasional. Acara iki sengaja diadani ing palataran Balai Desa Sumberejo kanthi ancas supaya akeh warga sing bisa melu nonton. Dene panitia sing akeh-akehe para nom-noman wiiwt sore wis nyiapake piranti kang dibutuhake yaiku kanthi masang LCD lan menthang kain putih kang ambane telung meter nggunakkae pring. Hariyadi Ketua Karang Taruna Sumberejo nelakake menawa acara iki diadani kanggo njaga kerukunane warga Desa Sumberejo lan nyaranani supaya warga kang seneng nonton bal-balan bisa marem anggone ndhukung tim unggulane. 
+                                                    
+                                                    1.	Saking pawarta ing nginggil sinten ingkang nggelar acara nonton bareng Semifinal bal-balan ...
+                                                                
+                                                    A.	Karang Taruna Desa Sumberejo	 
+                                                    
+                                                    2.	Menapa irah-irahan saking pawarta ing nginggil ...
+                                                    A.	Nonton Bareng Semifinal Bal-Balan Piala Dunia 2014
+                                                    
+                                                    3.	Kapan lan wonten pundi kagelar Nonton Bareng Semifinal Bal-Balan Piala Dunia 2014 ....
+                                                    tanggal 10 Juli
+                                                    
+                                                    4.	Pawarta punika mujudaken informasi bab kedadosan ingkang dumadi. Informasi ingkang kalebet pawarta nggadhahi ciri-ciri kados  ing ngandhap punika. Ing ngandhap punika kalebet ciri-cirinipun pawarta, kajaba...
+                                                    A.	konflik
+                                                    5.	Pawarta punika mujudaken informasi bab kedadosan ingkang dumadi. Informasi ingkang kalebet pawarta nggadhahi ciri-ciri kados  ing ngandhap punika. Ciri pawarta ingkang tegesipun sumbere informasi saking kedadeyan nyata kang dumadi wonten ing masyarakat, dipunarani.....
+                                                    A.	faktual
+                                                    
+                                                    6.	Tanggapan mujudaken katrangan lisan menapa dene tulisan kanthi ancas kangge aweh panemu utawi njlentrehaken sawijining bab ingkang dipunandharaken. Salah satunggaling cara nalika nanggapi pawarta kedah nggadhahi sikap ingkang objektif, obyektif tegesipun ...
+                                                    A.	Ngadhepi pawarta kanthi apa anane
+                                                    
+                                                    7.	Saderengipun dipun waos lan dipun giyaraken utawi dipunterbitaken, umumipun teks pawarta ingkang sampun dipuntulis menika dipun tliti langkung rumiyin lumantar tahap ingkang dipunarani penyuntingan. Ancas dipunwontenaken penyuntingan inggih menika....
+                                                    A.	Ngowahi struktur supaya runtut lan kepenak diwaca utawa dirungokake
+                                                    
+                                                    8.	Ukara ing ngandhap punika ingkang migunakaken basa krama yaiku …
+                                                    A.	kula kaliyan panjenengan sami-sami tiyang boten gadhah
+                                                    
+                                                    9.	Aja nganti dadi atimu iya bu, dhek wingi aku lunga, ora pamit kowe. Ukara basa ngoko punika kasalina ngagem basa krama …
+                                                    A.	 “sampun ngantos dados penganggalih panjenengan inggih bu, kala wingi kula kesah, boten pamit panjenengan.”
+                                                    
+                                                    10.	Simbahku yuswane wis satus taun.
+                                                    Adhiku ... lagi patbelas taun.
+                                                    Tembung ingkang trep kangge ngisi ceceg-ceceg ing nginggil inggih punika ...
+                                                    A.	Umure
+                                                    
+                                                    11.	“Ibu tuku gedhang goreng karo tahu 5” Manawa kasalin basa kramanipun inggih punika…
+                                                    A.	Ibu mundhut pisang goreng kaliyan tahu gangsal
+                                                    
+                                                    
+                                                    12.	“Bapak badhe tindhak dhateng Semarang.”
+                                                    Ukara punika menawi dipun owahi dados pitakenan ingkang mawi subasita dadosipun ...
+                                                    A.	Bapak badhe tindak dhateng pundi?
+                                                    
+                                                    13.	Pak Kardi... kula, punika... bapak, bilih mangke bakda magrib... katuran... dhateng bale dhusun saperlu rapat RT.
+                                                    Ceceg-ceceg ing nginggil isinipun kang pener inggih punika...
+                                                    A.	Sowan, dipunutus, panjenengan, rawuh
+                                                    
+                                                    14.	Ukara ing ngandhap punika ingkang leres miturut unggah-ungguhipun basa inggih punika ...
+                                                    A.	Bapak tindak dhateng Semarang
+                                                    
+                                                    15.	Bu Rina menyang kantor jam sanga,
+                                                    Ukara kasebat menawi dipun owahi miturut unggah-ungguh basa kang trep inggih menika …
+                                                    A.	Bu Rina tindak kantor tabuh sanga¬¬¬
+                                                    
+                                                    16.	Carios wayang kang nyariosaken perangipun Pandhawa mungsuh Kurawa inggih punika …
+                                                    A.	
+                                                    B.	Mahabarata 
+                                                    
+                                                    17.	Dasanamanipun Raden Wekudara inggih punika …
+                                                    A.	Brata Sena
+                                                    
+                                                    18.	Miturut crita lairipun Bima, Bima punika lair awujud bungkus. Sinten ingkang saged mecahaken bungkus punika?
+                                                    A.	Gajah sena
+                                                    
+                                                    19.	Ing ngandhap punika gegamanipun Raden Werkudara, inggih punika....
+                                                    A.	Kuku pancanaka
+                                                    
+                                                    20.	Watakipun Bima ing ngandhap punika,  kajaba ...
+                                                    A.	Ora seneng tetulung
+                                                    
+                                                    21.	Ramanipun Raden Werkudara inggih punika...
+                                                    A.	Prabu Pandhu
+                                                    B.			
+                                                    
+                                                    22.	Ingkang kagungan julukan otot kawat balung wesi inggih punika Raden ...
+                                                    A.	Gathutkaca
+                                                    B.						 
+                                                    
+                                                    23.	Ingkang nyebabaken Pandhawa kaliyan Kurawa boten saged rukun inggih menika...
+                                                    A.	Dewi Gendari kang ora trima digarwa dening Adipati  Drestarasta. 
+                                                    
+                                                    24.	Pandhawa kaliyan Kurawa punika sedherek tunggal simbah, inggih menika wayahipun(putu)....
+                                                    A.	Abiyasa 
+                                                    
+                                                    25.	Nakula kaliyan Sadhewa menika putranipun Prabu Pandhu Dewanata kaliyan...
+                                                    A.	Dewi Madrim
+                                                    
+                                                    26.	Tembung kramanipun wayang kulit inggih punika...
+                                                    A.	Ringgit wacucal
+                                                    
+                                                    27.	Piranti ingkang dipun ginakaken wonten ing pagelaran wayang menika maneka werna, salah satunggalipun inggih menika geber putih ingkang nggambaraken langit utawa angkasa. Geber putih menika dipun arani....
+                                                    A.	Kelir
+                                                    
+                                                    28.	Piranti debog ingkang dipun ginakaken ing pagelaran wayang, ingkang kangge nancepaken wayang kulit, menika nggambaraken...
+                                                    A.	Bumi
+                                                    
+                                                    29.	Menawi kita mirengaken carita wayang menika sejatosipun bab-bab menapa kemawon ingkang saged kita  pendhet lan saged kita jumbuhaken kaliyan kawontenan ing jaman samenika...
+                                                    A.	Pituduh babagan ala lan becik saking isinipun crita
+                                                    
+                                                    30.	Pitutur luhur ingkang saged kapendhet saking cariyos Mahabarata ing ngandhap menika, kajaba...
+                                                    A.	Menawi gadhah pepenginan kedah dipun upaya kadospundi caranipun.
+                                                    
+                                                    
+                                                    
+                                                    Gatekna wacan ing ngisor iki kanggo mangsuli pitakonan nomer 31 – 33!
+                                                     
+                                                    
+                                                    31.	Jurusan menapa ingkang dipunpendhet dening paraga wonten wacan kasebut?
+                                                    A.	Tata busana
+                                                    
+                                                    32.	Sinten asmaning paraga wonten wacan kasebut?
+                                                    A.	Marni
+                                                    
+                                                    33.	Apa alesane paraga milih jurusan kasebut?
+                                                    A.	Mergane krenteg saka atine dhewe
+                                                    
+                                                    Gatekna wacan ing ngisor iki kanggo mangsuli pitakonan nomer 
+                                                     
+                                                    
+                                                    34.	Miturut wacan kasebut, Subagya lan Sujarwa gladhen saben dina ...
+                                                    A.	Minggu
+                                                    
+                                                    35.	Subagya lan Sujarwa gladhen nari wonten ing ....
+                                                    A.	pendhapa kabupaten
+                                                    
+                                                    36.	Menapa padamelan saking tiyang sepuhipun Subagya?
+                                                    A.	seniman lukis
+                                                    
+                                                    37.	Kabudayan Jawi prelu dipunlestantunaken. Ukara kasebut manawi kaserat ngginakaken aksara Jawa inggih menika ....
+                                                    A.	 
+                                                    B.	 
+                                                    C.	 
+                                                    D.	 
+                                                    E.	 
+                                                    
+                                                    38.	Geguritan Jawi kaperang dados kalih inggih menika gagrag lawas saha gagrag anyar. Wonten ngandhap menika ingkang kalebet titikanipun geguritan gagrak anyar inggih menika...
+                                                    A.	cacahing gatra boten kaiket
+                                                    
+                                                    39.	Geguritan ngandhut struktur batin, salah satunggalipun inggih menika gagasan pokok kang kaandharaken dening pangripta lumantar geguritan, struktur batin punika dipunarani....
+                                                    A.	tema
+                                                    
+                                                    40.	Salah satunggaling struktur geguritan inggih menika imaji. Ingkang dipunwastani imaji inggih menika ....
+                                                    A.	caranipun panyerat ngajak pamaos supados saged ngraosaken menapa ingkang kaserat
+                                                    
+                                                    41.	Diksi inggih menika pamilihing tembung ing sajroning geguritan. Pamilihing tembung kangge damel geguritan menika umumipun ...
+                                                    A.	nggadhahi teges ingkang endah lan mentes
+                                                    
+                                                    
+                                                    Gatekna geguritan ing ngisor iki kanggo mangsuli pitakonan nomer 19 – 20
+                                                    Mbledhos Maneh
+                                                    Pangripta: Susanto
+                                                    Kabar iku durung ilang teka kendhang iki
+                                                    Merapi lagi prei
+                                                    Kelud ngendum awu
+                                                    Omah lan tanduran ora luput
+                                                    Mandheg ninggal penyakit
+                                                    Sinabung isih ngringet
+                                                    Raung nutup dalane ndhuwur
+                                                    Mbuyari angen-angen
+                                                    Gamalama ora gelem kari
+                                                    Kapethik saking buku Antologi Geguritan “Sakwise Esmiet lan Suparto Brata”
+                                                    
+                                                    42.	Salah satunggaling majas ingkang asring kaginakaken wonten ing geguritan inggih menika majas personifikasi utawi ndadosaken barang mati saged urip lan gadhah sipat kados manungsa. Tuladhanipun majas personifikasi wonten salebeting geguritan ing ngingil inggih menika ...
+                                                    A.	Sinabung isih ngringet
+                                                    
+                                                    43.	“Raung nutup dalane ndhuwur” tegesipun ukara kasebut inggih menika ....
+                                                    A.	langite katutup awu
+                                                    
+                                                    Gatekna geguritan ing ngisor iki kanggo mangsuli pitakonan nomer 21 – 23
+                                                    Pepetenging Ati
+                                                    Pangripta: Rezky Soffan Hadi
+                                                    
+                                                    Cahya kang katon sumunar
+                                                    Dadi kanca ing wengi iki
+                                                    Ngilangake rasa sepi
+                                                    Kang nggrogoti tekan jero ati
+                                                    Ning aku ora melu nduweni
+                                                    Kabeh iku wus pinesthine Gusti
+                                                    
+                                                    Senajan gedhene mung sasigar semangka
+                                                    Ning cahyamu kaya sentolop batre lima
+                                                    Srengenge isih ajeg ngedum
+                                                    Sumunare kang anteng
+                                                    Ning ngapa ati iki isih krasa peteng
+                                                    
+                                                    Kapethik saking buku Antologi Geguritan “Sakwise Esmiet lan Suparto Brata”
+                                                    
+                                                    44.	“Cahya kang katon sumunar” dasanamaning tembung katon inggih menika ....
+                                                    A.	katingal
+                                                    
+                                                    45.	“Senajan gedhene mung sasigar semangka, ning cahyamu kaya sentolop batre lima” saking ukara kasebut, menapa ingkang saukuran sasigar semangka?
+                                                    A.	rembulan
+                                                    
+                                                    Gatekna pethilan geguritan ing ngisor iki kanggo mangsuli pitakonan nomer 46
+                                                    Krodhaning Alam
+                                                    Dening: Sudi Yatmana
+                                                    ....
+                                                    Saka Pasifik tekan Atlantik
+                                                    El nino la nina nggremet nggrumut
+                                                    Nalusur katulistiwa
+                                                    Ngganepi gonjang-ganjinging proses kahanan
+                                                    Kaprabawan buwengan misteri nyakra manggilingan
+                                                    Ngebaki bujur barat bujur timur
+                                                    Lintang utara lintang selatan
+                                                    ....
+                                                    
+                                                    46.	Adhedhasar geguritan “Krodhaning Alam” ing nginggil, struktur fisik ingkang kawrat ing salebeting geguritan kasebut inggih menika ...
+                                                    A.	imaji
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    Gatekna geguritan ing ngisor iki kanggo mangsuli pitakonan nomer 47 – 50
+                                                    
+                                                    Sun-gegurit
+                                                    Kaanan jaman saiki
+                                                    Sipat pemudha-pemudhi
+                                                    Srawungane saya ndadi
+                                                    Raket wewekane sepi
+                                                    Tan kadi duk jaman nguni
+                                                    Srawung sarwa ngati-ati
+                                                        Yen manut wasiteng kuna
+                                                    Priya srawung lan wanita
+                                                    Gampang ketaman panggodha
+                                                    Nerak ing laku susila
+                                                    Temah darbe jeneng ala
+                                                    Wasanene tibeng papa
+                                                    47.	Wosing geguritan ing nginggil inggih menika ....
+                                                    A.	sesrawunganipun para mudha-mudhi ingkang boten ngati-ati
+                                                    
+                                                    48.	Tembung garba inggih menika salah satunggaling unsur kaendahaning sastra Jawa. Tembung garba dumados saking kalih tembung ingkang digandheng dados satunggal. Tuladha tembung garba saking geguritan ing nginggil inggih menika wasiteng. Tembung wasiteng dumados saking tembung ....
+                                                    A.	wasita + ing
+                                                    
+                                                    49.	“Temah darbe jeneng ala” tembung darbe gadhah dasanama inggih menika ...
+                                                    A.	duwe
+                                                    
+                                                    50.	Nalika maos geguritan kedah nggatosaken ingkang dipunwastani wicara. Tegesipun wicara inggih menika ....
+                                                    A.	pocapan sarta vokal nalika maos geguritan
+                                                    
+                                                    51.	Jinising teks menika wonten maneka warni, wonten deskripsi, narasi, eksposisi, persuasi, lan argumentasi. Saking teks kala wau, ingkang wosipun nggambaraken lan ngandharaken sawijining objek kanthi cetha inggih menika ....
+                                                    A.	deskripsi
+                                                    
+                                                    Gatekna wacan ing ngisor iki kanggo mangsuli pitakonan nomer 52
+                                                    Udheng basa ngokone iket utawa diarani blangkon dene basa kramane dhestar. Udheng iku arupa panganggo kang dianggo kanggo nutupi mustaka. Udheng lumrahe kagawe saka kain bathik awujud pasagi kang banjur dilempit, ditata kanthi njlimet supaya hiasan utawa rerenggan ing sisih kiwa lan tengen bisa padha, banjur dijait miturut ukurane mustaka kang ngersakake.
+                                                    
+                                                    
+                                                    52.	Miturut struktur, wacan kasebut kalebu jinising wacan deskripsi, amarga ....
+                                                    A.	nggambarake bab udheng kanthi laras
+                                                    
+                                                    Gatekna wacan ing ngisor iki kanggo mangsuli pitakonan nomer 33 – 35
+                                                    Mendut
+                                                    Dening: Devi Solecha
+                                                    Mendut inggih menika satunggaling tetedhan ingkang asalipun saking tanah Jawi. Mendut dipundamel saking glepung ketan. Wujudipun mendut menika bunder alit, kirang langkung diameter 2-3 cm. Mendut werninipun jambon, ijem, sarta wonten werni pethak saking santen kenthel. Mendut menika wonten isinipun, inggih menika enten-enten ingkang dipundamel saking parutan krambil kacampur kalih gendhis Jawi. 
+                                                    Mendut saged kapanggihaken wonten peken. Limrahipun mendut dipunwungkus ngginakaken roning pisang lajeng dikencengi ngangge biting. Wujuding bungkus menika ingkang jinis ‘tum’ utawi wujud prisma segi tiga. Sanesipun, mendut ugi wonten ingkang dipunwungkus kados krucut lajeng ronipun dipunlempit supados kenceng. Werninipun ron pisang menika ijem alum amargi dipunkukus supados mendutipun mateng.
+                                                    Manawi dipuntedha, mendut menika raosipun gurih saking santen kenthelipun sarta manis saking isi enten-entenipun. Wondene tekstur-ipun mendut alus lan kenyel.
+                                                     
+                                                    
+                                                    53.	Saking andharan ing nginggil, kadospundi raosipun tetedhan menika?
+                                                    A.	manis wonten gurihipun
+                                                    
+                                                    54.	Adhedhasar wacan ing nginggil, kadospundi supados wungkusipun boten uwal?
+                                                    A.	dipunbiting
+                                                    
+                                                    55.	“Sanesipun, mendut ugi wonten ingkang dipunwungkus kados krucut lajeng ronipun dipunlempit supados kenceng” tembung ronipun asalipun saking tembung lingga ron ingkang tegesipun ....
+                                                    A.	santen
+                                                    
+                                                    Gatekna wacan ing ngisor iki kanggo mangsuli pitakonan nomer 36 – 37
+                                                    Puthu Ayu
+                                                    Dening: Yulita Agustina
+                                                    Puthu ayu yaiku salah sawijining panganan khas saka daerah Jawa Tengah.  Lumrahe puthu ayu awujud kembang lan warnane ijo enom. Puthu ayu iki awujud kembang sing kelopake ana lima lan tengahe ora bolong. Puthu ayu iki ndhuwure diwenehi parutan krambil enom sing putih resik. Parutan krambil di wenehake ing perangan kelopake lan ing bunderan tengahe.
+                                                    Wujude puthu ayu asline ora mung awujud kembang sing kelopake ana lima. Ana puthu ayu sing wujude kembang nanging tengahe bolong lan cacahe kelopake ana wolu. Ana uga sing wujude mung bunder ora awujud kembang. Puthu ayu iki wujude werna-werna gumantung cithakane.   Ukurane puthu ayu saben bentuk iku beda-beda ora mesti padha, ana sing diameter 7 cm, 5 cm, lan ana sing paling cilik yaiku 4 cm. 
+                                                    Rasane puthu ayu iki gurih-gurih legi, amarga puthu ayu iki digawe saka tepung beras lan parutan kambil sing di jupuk banyune utawa santen. Rasa gurihe kuwi saka santene lan yen rasa legine kuwi amargi diwenehi campuran gula ing adonane. Teksture puthu ayu yen di pangan yaiku empuk ora atos ora ledrek. Puthu ayu akeh disenengi amarga rasane sing enak kuwi.
+                                                    
+                                                    56.	Adhedhasar wacan ing nginggil wonten pinten wujudipun puthu ayu?
+                                                    A.	tiga
+                                                    
+                                                    57.	Raos gurih ingkang kraos saking puthu ayu, sanesipun saking parutan krambil ugi saking ....
+                                                    A.	santen kenthel
+                                                    
+                                                    
+                                                    Gatekna wacan ing ngisor iki kanggo mangsuli pitakonan nomer 58 – 60
+                                                    Omah tradisional Jawa Tengah salah sijine yaiku Joglo. Joglo iku jinis omah tradisional Jawa sing katon prasaja lan dipigunakake minangka simbol utawa panandha status sosial saka bangsawan Jawa. Biasane omah Joglo mung diduweni wong kang duwe banda akeh. Omah joglo duweni keunikan, kang minangka ciri khase omah joglo,  yaiku payone kang dhuwur, duweni saka wangun papat, saka kang utama kang nyangga bangunan lan tumpang sari kang wujud susunan balok kang disangga saka guru. Ruangan ing omah joglo biasane dibagi dadi telung bagian. Bagian kaping siji yaiku ruangan kanggo patemon kang disebut pendhapa. Bagian kapindo yaiku ruang tengah utawa ruang kanggo nanggap wayang kulit, kasebut pringgitan, bagian kaping telu yaiku ndalem utawa omah jero, kanggo ruang keluarga. Ing jero ruangan iki ana telu senthong, yaiku senthong kiwa, senthong tengah lan senthong tengen.
+                                                    Kapetik saka: Holoesciences.blogspot.co.id/2017/04/deskripsi-rumah-adat-joglo-  
+                                                                                                 dalam-bahasa.html?m=1, kanthi owah-owahan sawetara
+                                                    
+                                                    58.	Ciri khase Omah Joglo inggih menika ..
+                                                    A.	payone kang dhuwur, saka guru lan tumpang sari
+                                                    
+                                                    59.	Rikala rumiyin omah Joglo menika dipundadosaken simbul minangka status sosial dening masyarakat, amargi....
+                                                    A.	mbutuhake wragat kang mboten sekedhik lan lemah kang amba nalika mbangun
+                                                    
+                                                    60.	Saking paragrap wacana deskriptif ing nginggil, perangan omah Joglo wonten tiga, salah satunggaling perangan inggih menika ingkang kawastan omah ndalem ingkang gadhah fungsi kangge ...
+                                                                
+                                                    A.	nanggap wayang kulit	 
+                                                    
+                                                     
+                                                    SOAL LATIHAN BAHASA JAWA 2
+                                                    
+                                                    2.	Mujudaken salah sawijining kegiyatan kangge medharaken gagasan utawa informasi kang katujokaken marang tiyang kathah punika kawastanan ...
+                                                    A.	Sesorah
+                                                    
+                                                    3.	Supados sesorah saged kasil kanthi becik, tiyang ingkang nindakaken sesorah, becikipun milih perkawis kadosta ing ngandhap punika, kajaba ...
+                                                    A.	Dibisani dening kang mirengaken
+                                                    
+                                                    4.	Pidhato kanthi ngasta cathetan cilik minangka pangeling-eling urutanipun ingkang badhe dipun wedharaken utawa dipun wicantenaken, punika pidhato kanti cara ...						
+                                                    A.	Ekstemporan
+                                                    
+                                                    5.	Pidhato kanti cara dadakan, boten dinyana-nyana. Biasanipun ingkang nindakaken tiyang ingkang sampun pengalaman ugi kagungan ketrampilan micara ing ngajengipun tiyang kathah, punika pidato kanti cara ...
+                                                    A.	Impromtu
+                                                    
+                                                    6.	“Para rawuh ingkang dhahat kinurmatan ...”. Tembung Kinurmatan sami tegesipun kalih tembung ...
+                                                    A.	Dikurmati						
+                                                    
+                                                    7.	“Bapak Kepala Sekolah ingkang dhahat kinakbekten, bapak ibu ingkang kinurmatan, saha adhik-adhik ingkang kula tresnani”... 
+                                                    Perangan sesorah/ pidatho punika awujud  ...
+                                                    A.	Purwaka basa		
+                                                             
+                                                    8.	 “Ing wasana minangka aturipun Bapak Santoso sekalian lumantar kula hambok bilih wonten kiranging boja miwah krama mugi para tamu ngluberaken samodra pangaksama”. Pethikan pidato/ sesorah punika kagungan ancas ...
+                                                    A.	Nyuwun pangapunten
+                                                    
+                                                    9.	Sesorah punika ageng sanget mumpangatipun minangka sarana sesambungan kaliyan masyarakat kanthi langsung, satemah punapa kang dipun kajengaken saged langsung dibiawarakaken lan saged antuk tanggapan setuju punapa botenipun, sesorah ugi saged kangge paring kawruh kangge masyarakat, punika ingkang dados punapanipun sesorah ...
+                                                    
+                                                    A.	Tujuan
+                                                    
+                                                    10.	“Kanthi rahmating Gusti ingkang Maha Agung, ing wekdal punika kula lan panjenengan sedaya taksih pinaringan karaharjan sarta kawilujengan”.
+                                                    Ing nginggil punika salah satunggaling cengkorongan sesorah ingkang dipun wastani ...
+                                                    A.	Atur pamuji
+                                                    
+                                                    11.	Wonten ing cuplikan teks sesorah ing nginggil wonten tembung “kawilujengan”. Dene tembung “kawilujengan” punika kagungan teges ...
+                                                    A.	Keslametan
+                                                    
+                                                    12.	Nalika maos sesorah punika supados dipun gatosaken anggenipun micara kedhah nengsemaken. Micara ingkang nengsemaken punika boten namung awujud pakecapanipun kemawon ananging ugi kabangun saking patrapipun tiyang ingkang gineman. Dening salah satunggaling patrap tiyang ingkang wasis guneman inggih punika ...
+                                                    A.	Miwiti anggenipun micara menawa sampun antuk palilah lan swasana kang trep
+                                                    
+                                                    13.	Nalika maos sesorah  kedah nggadhahi sangu babagan swara. Punapa tegesipun swara...
+                                                    A.	Swara kudu digladhi kanthi temen lan ajeg
+                                                    
+                                                    14.	Owah-owahan pasemon (raut muka) uga kedah kaudi supados sedaya wau saged nggambaraken isining manah, kang tundhonipun jumbuh kaliyan swasana, punika kalebet cecawis sanguning pamaos sesorah babagan …
+                                                    A.	Subasita 
+                                                    
+                                                    15.	Sakderengipun mangga kula dherekaken ngonjukaken  rasa syukur wonten ngarsanipun Gusti Kang Maha Agung, amargi saking  keparingipun panjenengan lan kula saged ngestreni patemon ing ing wekdal menika kanthi slamet, boten wonten alangan satunggal menapa,,,
+                                                    Sajroning sesorah, pratelan ing nginggil kalebet perangan....
+                                                    A.	Purwaka basa
+                                                    
+                                                    16.	Kiranging boja krama anggen kula anampi rawuh panjenengan, kula tansah nyuwun pangapunten.
+                                                    Pethilan tanggap wacana  ing nginggil kalebet perangan....
+                                                    A.	Wasana basa
+                                                    
+                                                    17.	Rantaman sesorah ingkang leres inggih menika...
+                                                    A.	Salam pambuka, pambuka, surasa, panutup, salam panutup
+                                                    
+                                                    18.	Pariwara radhiyo punika saged dipunandharaken kanthi cara Theater of the mind utawi kanthi cara pribadhi. Sawetawis wujudipun saged kanthi dhialog utawi monolog. Ing ngandhap punika ingkang boten kalebet titikanipun pariwara radhiyo ingkang becik, inggih punika....
+                                                    B.	Tembungipun rumit lan endah
+                                                    
+                                                    19.	Pariwara ingkang sae punika kedah ngandhut unsur-unsur ingkang jangkep. Ing ngandhap punika ingkang boten kalebet unsur-unsur pariwara inggih punika ....
+                                                    A.	Karakteripun paraga ingkang damel iklan
+                                                    
+                                                    20.	Jinisipun iklan punika werni-werni, salah satunggalipun inggih punika iklan ingkang namung mbetahaken gambar lan pangolahaning werna, punika dipunwastani....
+                                                    A.	Iklan cetak
+                                                    
+                                                    21.	Wara-wara  ingkang surasanipun nawakake sawijining barang utawi jasa, dipunarani....
+                                                    A.	Iklan/pariwara
+                                                    
+                                                    22.	Pariwara  ingkang mbetahaken piranti swara, audio visual, lan efek inggih punika....
+                                                    A.	Iklan TV
+                                                    
+                                                    23.	Pamaos nalika maosaken pariwara kedah saged mbentenaken aksara konsonan ing abjad Jawa. Amargi wonten perangan ingkang benten kaliyan abjad umum. Abjad kasebut inggih punika da lan dha, ta lan tha. Perangan punika kalebet keprigelan/ ketrampilan...
+                                                    A.	Nggunakake pangucap kang trep
+                                                    
+                                                    Teks Pariwara menika kangge mangsuli pitakenan soal nomer 23 – 27
+                                                    
+                                                    Ibu	: “Arep menyang ngendi to ndhuk, kok yahmene wis dandan rapi?”
+                                                    Ratih	: “ Kula bade dhateng peken, Bu,,”
+                                                    Ibu	: “ Lho,  kok njanur gunung, wong padatan sing nyang pasar kuwi aku, kowe njur    sing masak ?”
+                                                    Ratih	: “Boten badhe tumbas sayur, bumbon lan jajan pasar kok Bu,,”
+                                                    Ibu	: “Njur arep ngapa?”
+                                                    Ratih	: “Kula raos kok nyambut damel seprika sepriki boten nate cementhel wujud napa-napa. Celengan sekedhik niki ajeng kula tumbasaken gelang emas-emasan ngoten lho Bu..”
+                                                    Ibu	:” Walah, tobat-tobat. Bola-bali bocah yen sabane adoh pitik. Yen arep tuku mas-masan ya ora pasar nggone ta, ndhuk..”
+                                                    Ratih	: “ Lajeng pundi, Bu..?”
+                                                    Ibu	: “ Kana ndang menyang Toko Mas Semar sing manggon ing ratan Kusuma Bangsa nomer 5. Kowe ora bakal kapusan. Ing Toko Mas Semar emase dijamin murni, surat-surate lengkap, sumadya maneka werna modhel gelang lan mas-masan liyane. Yen tuku ana kana, njur mbesuk arep tok dol maneh ya mesthi gelem nampa, rugine ora akeh, lan sing mesthi pelayanane kepenak lan ramah..”
+                                                    Ratih	: “ Wah,,,mekaten nggih, Bu. Menawi ngaten kula pamit rumiyin nggih Bu,,”
+                                                    Ibu	: “Ya wis kana,, Ndang budhal, selak tokone tutup.”
+                                                    
+                                                    Narator: “ Ayo tuku mas ing Toko Mas Semar,,Toko Mas semar pancen jooss,,!”
+                                                    
+                                                    24.	Teks pariwara ing nginggil, saenipun dipun giyaraken lumantar....
+                                                    A.	Radhiyo
+                                                    
+                                                    25.	Ancasipun pariwara ing nginggil inggih menika...
+                                                    A.	Nawakake barang
+                                                    
+                                                    26.	Pacelathon ing antaranipun paraga sajroning teks pariwara ing nginggil, Ratih ngginakaken basa....
+                                                    A.	Krama alus
+                                                    
+                                                    27.	Pariwara ing nginggil katujokaken kangge....
+                                                    A.	Masyarakat
+                                                    
+                                                    28.	“Lho kok  njanur gunung, wong padatan sing nyang pasar kuwi aku, kowe njur    sing masak ?”
+                                                    Tembung njanur gunung tegesipun.....
+                                                    A.	Dumadakan
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    Teks akasara jawa punika kangge mangsuli pitakenan nomer 28-33
+                                                    
+                                                    ?8[zrnFi8negrmi[yosHi=taun\;1785;.
+                                                    ?pnJeneznipunPut]pmBj_ski==$ulTnHm_@u*uwnkpi=tig,aibunipunR[nnHyum=@rwti.
+                                                    ?kannK][tonHi=k=[botenS[aam/gidtezipunWlnFi,fi%negralitFipunG|lwenQh[ay=put]inipunHi=#egl\xj
+                                                    
+                                                    29.	Cacahipun aksara  murda sajroning teks ing nginggil inggih punika
+                                                    A.	4
+                                                    B.	5
+                                                    C.	6
+                                                    D.	7
+                                                    E.	8
+                                                    
+                                                    30.	Pangeran Dipanegara lair ing taun …
+                                                    A.	1795
+                                                    B.	1758
+                                                    C.	1875
+                                                    D.	1785
+                                                    E.	1685
+                                                    
+                                                    31.	Pangeran Dipanegara punika putranipun... …
+                                                    A.	Sultan hamengkubawana II
+                                                    B.	Sultan hamengkubawana III
+                                                    C.	Sultan hamengkubawana IV
+                                                    D.	Sultan hamengkubawana V
+                                                    E.	Sultan hamengkubawana VI
+                                                    
+                                                    32.	Amargi duginipun Walanda ing lingkungan Kraton, pangeran Dipanegara dipungulawenthah dening...
+                                                    A.	Eyang putrinipun
+                                                    B.	Eyang kakungipun
+                                                    C.	Pakdheninipun
+                                                    D.	Bulikipun
+                                                    E.	Paklikipun
+                                                    
+                                                    33.	Nalika tasih alit, Pangeran Dipanegara dipun gulawenthah ing lingkungan pesantren ingkang mapan ing...
+                                                    A.	Tegalsari
+                                                    B.	Kraton Ngayogyakarto
+                                                    C.	Tegalarum
+                                                    D.	Tegalreja
+                                                    E.	Tegal
+                                                    
+                                                    
+                                                    34.	?pe/lukwunizbilihtuminFkHi=k=afig=afigu=afigunpuniknmuve    bbHkenKitkir=p]yitN.
+                                                    Manut ukara ing nginggil, tumindak kang adigang, adigung, adiguna punika ndadosaken 
+                                                    kirang ...
+                                                    A.	Prayoga					
+                                                    B.	Prayitna					 
+                                                    C.	Prawira
+                                                    D.	Pramuniaga
+                                                    E.	pramuswara
+                                                    
+                                                    35.	akulai/t=gl\:15”O[kTobe/taun\:1998: menawi kaserat latinipun inggih punika ...
+                                                    A.	aku lair tanggal 15 Oktober taun 1998
+                                                    
+                                                    36.	napza bisa ngrusak saraf.
+                                                    Menawi kaserat latinipun inggih punika ...
+                                                    A.	npJ+biszu]skSrp+\
+                                                    B.	npj+bbisz]skSrp+\
+                                                    C.	npj+bbiszu]skSrp+\
+                                                    D.	npJbbisz]skSrp\
+                                                    E.	npjbbiszu]skSrp\
+                                                    37.	Pak Kardi, ... kula punika ... bapak, bilih mangke bakda magrib ... katuran ... dhateng bale dhusun saperlu rapat RT. Ceceg-ceceg ing nginggil isinipun kang pener inggih punika ...
+                                                    A.	Sowan, dipunutus, panjenengan, rawuh
+                                                    
+                                                    38.	Ukara ing ngandhap punika ingkang pener miturut unggah-ungguhipun basa inggih punika ...
+                                                    A.	Bapak tindhak dateng Semarang
+                                                    39.	Asih : Iki bukune sapa ya ?
+                                                    Ningsing : O, buku sing abang iku........bu guru, wingi dak silih. Manawa sing putuh iku.....
+                                                    Tembung ingkang trep kangge ngisi ceceg-ceceg ing nginggil inggih menika...
+                                                    A.	Kagungane, gadhahane kula
+                                                    
+                                                    40.	“Aku ora melu dhisik, amerga simbah lagi lara untu.”
+                                                    Ukara ing nginggil menawi dipun dadosaken basa krama alus dados.....
+                                                    A.	Kula boten tumut rumiyin, amargi simbah nembe gerah waja.
+                                                    41.	Tembung krama inggilipun lungguh, nggawa, lan tuku inggih menika......
+                                                    A.	Pinarak, ngasta lan mundhut
+                                                    
+                                                    42.	Pak Kardi, ... kula punika ... bapak, bilih mangke bakda magrib ... katuran ... dhateng bale dhusun saperlu rapat RT. Ceceg-ceceg ing nginggil isinipun kang pener inggih punika ...
+                                                    A.	Sowan, dipunutus, panjenengan, rawuh
+                                                    
+                                                    43.	Ukara ing ngandhap punika ingkang pener miturut unggah-ungguhipun basa inggih punika ...
+                                                    A.	Bapak tindak dateng Semarang
+                                                    
+                                                    44.	Bambang gadhah kanca sakelas ingkang naminipun Ahmad, samenika Bambang sampun dados guru, dene Ahmad dados Kepala sekolahipun Bambang. Basa ingkang trep dipun gunakaken Ahmad marang Bambang inggih menika....
+                                                    A.	Ngoko alus
+                                                    
+                                                    45.	Pakdhe Budi : Nang bapakmu digawekna ngombe apa?
+                                                    Yanto           :  ..........
+                                                    Wangsulanipun Yanto kangge mangsuli pitakenan Pakdhe Budi, inggih menika....
+                                                    A.	Rama paling remen dipundamelaken kopi, Pakdhe
+                                                    46.	Unggah-ungguh basa menika dipuntrapaken miturut kahananipun, sinten pawongan ingkang dipun adhepi. Ukara ing ngandhap menika ingkang leres miturut unggah-ungguh basanipun inggih menika...
+                                                    A.	Bapak sampun rawuh kala wau enjing   
+                                                    
+                                                    47.	Pathokan panulise tembang macapat kang ngemot cacahe wanda (suku kata) saben sagatra yaiku …. 
+                                                    A.	guru wilangan 
+                                                    
+                                                    48.	Pathokan panulisane tembang macapat kang ngemot cacahe larik (baris) saben sapada yaiku … 
+                                                    A.	guru gatra 
+                                                    
+                                                    Gatekna tembang macapat ing ngisor iki kanggo mangsuli pitakonan no. 13-15!
+                                                     
+                                                    49.	Tembang ing ndhuwur kalebu tembang ...
+                                                    A.	Pocung
+                                                    
+                                                    50.	Wos surasane utawa isine tembang ing ndhuwur, yaiku ...
+                                                    A.	golek ngelmu iku kudu temen lan ngedohi sipat ala supaya bisa kasil
+                                                    
+                                                    51.	Tegese tembung kas yaiku …
+                                                    A.	gagah
+                                                    
+                                                    52.	Cacahe guru gatra tembang pocung yaiku …
+                                                    A.	4
+                                                    
+                                                    53.	Kang kalebu guru wilangan lan guru lagu tembang macapat pocung yaiku ...
+                                                    A.	12u, 6a, 8i, 12a 
+                                                    
+                                                    54.	Watak utawa sipate tembang pocung yaiku …
+                                                    A.	sakarepe dhewe 
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    55.	Gatekna tembang macapat ing ngisor iki!
+                                                     
+                                                    Tembang pocung ing dhuwur batangane ....
+                                                    a.	sepur
+                                                    
+                                                    56.	Gatekna babagan ing ngisor iki
+                                                    1)	Nemtukake irah-irahan kang jumbuh.
+                                                    2)	Nggatekake paugeran yaiku guru gatra, guru wilangan, lan guru lagune.
+                                                    3)	Nggunakakae basa kang informatif.
+                                                    4)	Pigunane saben jinis tembang macapat.
+                                                    5)	Watake saben jinis tembang macapat.
+                                                    Babagan kang wigati nalika arep nulis tembang macapat yaiku nomer ...
+                                                    a.	2), 4), lan 5)
+                                                    
+                                                    
+                                                    57.	Ngelmu iku kalakoni kanthi laku
+                                                    Lekase lawan kas
+                                                    Tegese kas nyantosani
+                                                    Setya budya pangekese dur angkara.
+                                                    Sedaya tembang macapat menika kagungan pitutur luhur kang kakandut ing syair tembangipun, dene pitutur luhur saking tembang ing nginggil inggih menika ...
+                                                    A.	Pados ilmu kanthi usaha lan temen, amargi ilmu menika saged damel kesantosan (kekukuhan) ati kang manteb, saged nyingkiri tumindak kang mboten becik
+                                                    
+                                                    58.	Seratan artikel kanthi tema kabudayan ingkang sumebar ing media massa punika sejatosipun nggadhahi ancas, ancas artikel ing ngandhap punika kajaba...
+                                                    A.	Kangge kabetahan damel laporan
+                                                    
+                                                    59.	Artikel budaya ingkang sae menika kedah ngandhut bab-bab kados ing ngandhap menika, kajaba...
+                                                    A.	Basanipun endah lan panjang
+                                                    
+                                                    60.	Sandiwara  menika maragakake paraga kanti dhasar  tumindak watake paraga utawi pawongaan sanes, lan  ingkang dados ciri khasipun sandiwara inggih menika....
+                                                    A.	Pacelathon (dhialog)
+                                                    
+                                                    61.	Wujudipun sandiwara menika wonten maneka werni, salah satunggalipun inggih menika sandiwara ingkang dipunparagakaken kaliyan gerak-gerik ananging boten wonten dhialog, namung wonten musik lan ekspresi saking paraganipun. Jenis sandiwara menika dipun arani...
+                                                    A.	Drama pantomim
+                                                    
+                                                    
+
+</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row my-2">
+                                        <div class="col-12 d-flex flex-row justify-content-start ">
+                                            <div class="form-group d-flex flex-row">
+                                                <input type="hidden" name="buku_id" value="<?php echo $buku_id; ?>">
+
+
+
+                                               
+
+                                                <script>
+                                                // Nonaktifkan tombol submit setelah ditekan
+                                                document.querySelector("form").addEventListener("submit", function(
+                                                    event) {
+                                                    var btn = event.target.querySelector("[type='submit']");
+                                                    btn.disabled = true;
+                                                });
+                                                </script>
+
+
+
+                                                <div class="">
+                                                    <!-- Button trigger modal untuk lihat buku -->
+                                                    <button type='button'
+                                                        class='btn btn-primary mx-1 h-auto text-center'
+                                                        data-toggle='modal'
+                                                        data-target='#modalBuku<?php echo $buku_id; ?>'>
+                                                        Lihat
+                                                    </button>
+                                                </div>
+
+                                                <!-- Modal untuk menampilkan detail buku -->
+                                                <div class="modal fade" id="modalBuku<?php echo $buku_id; ?>"
+                                                    tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel"
+                                                                    style="color: black; font-style: bold;">
+                                                                    <?php echo $judul; ?>
+                                                                </h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                               
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Tutup</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span style="font-size: 1rem; color:tomato;">Copyright © KePin Raja Setan 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top" style="display: none;">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <class class="modal-footer">
+                    <form action="" method="POST">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-primary" name="logout" type="submit">Logout</button>
+
+                    </form>
+                    <?php 
+            if (isset($_POST['logout'])) {
+                session_destroy();
+                echo "<script>
+                alert('Logout Berhasil!');
+                window.location.href='login.php';
+                </script>";
+                exit();
+            }
+        ?>
+                </class>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+
+
+
+
+</body>
+
+</html>
